@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { profileLookup } = require("../katas/profileLookup");
 
-describe.only("profileLookup()", () => {
+describe("profileLookup()", () => {
   it("returns 'No such contact' if passed a name that does not correspond to a contacts firstName", () => {
     const contacts = [
       {
