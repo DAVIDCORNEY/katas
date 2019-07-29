@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { longestWordLength } = require("../katas/longestWordLength");
 
-describe.only("longestWordLength()", () => {
+describe("longestWordLength()", () => {
   it("returns the length of a word, when passed a str with one word", () => {
     expect(longestWordLength("a")).to.equal(1);
   });
