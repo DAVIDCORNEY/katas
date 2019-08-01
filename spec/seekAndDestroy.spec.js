@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { seekAndDestroy } = require("../katas/seekAndDestroy");
 
-describe.only("seekAndDestroy()", () => {
+describe("seekAndDestroy()", () => {
   it("should return an empty array if passed an empty array", () => {
     expect(seekAndDestroy([])).to.eql([]);
   });
