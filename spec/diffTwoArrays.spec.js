@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { diffTwoArrays } = require("../katas/diffTwoArrays");
 
-describe.only("diffTwoArrays()", () => {
+describe("diffTwoArrays()", () => {
   it("should return an empty array if passed two empty arrays", () => {
     const arr1 = [];
     const arr2 = [];
