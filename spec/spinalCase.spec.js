@@ -5,7 +5,7 @@ describe.only("spinalCase()", () => {
   it("should return an empty string when passed an empty string", () => {
     expect(spinalCase("")).to.equal("");
   });
-  it("should return a spinal case string when passed a camelcase string", () => {
+  it("should return a spinal case string when passed a camelCase string", () => {
     expect(spinalCase("aB")).to.equal("a-b");
     expect(spinalCase("turnIntoSpinalCase")).to.equal("turn-into-spinal-case");
   });
