@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { whereForArtThou } = require("../katas/whereForArtThou");
 
-describe.only("whereForArtThou()", () => {
+describe("whereForArtThou()", () => {
   it("returns an empty array when passed an empty array", () => {
     expect(whereForArtThou([])).to.eql([]);
   });
