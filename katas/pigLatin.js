@@ -4,7 +4,11 @@ function pigLatin(str) {
   const consonants = str.slice(0, vowelPosition);
   const vowels = str.slice(vowelPosition);
   if (str.length === 0) return str;
-  return regex.test(str[0]) ? `${str}way` : `${vowels}${consonants}ay`;
+  return regex.test(str[0])
+    ? `${str}way`
+    : !regex.test(str)
+    ? `${str}ay`
+    : `${vowels}${consonants}ay`;
 }
 
 module.exports = { pigLatin };
