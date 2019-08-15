@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { spinalCase } = require("../katas/spinalCase");
 
-describe.only("spinalCase()", () => {
+describe("spinalCase()", () => {
   it("should return an empty string when passed an empty string", () => {
     expect(spinalCase("")).to.equal("");
   });
