@@ -15,4 +15,7 @@ describe.only("pigLatin()", () => {
     expect(pigLatin("california")).to.equal("aliforniacay");
     expect(pigLatin("glove")).to.equal("oveglay");
   });
+  it('should return a string with "ay" added to the end if passed a string comprising only consonants ', () => {
+    expect(pigLatin("bcd")).to.equal("bcday");
+  });
 });
