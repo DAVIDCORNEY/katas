@@ -18,5 +18,6 @@ describe.only("pigLatin()", () => {
   it('should return a string with "ay" added to the end if passed a string comprising only consonants ', () => {
     expect(pigLatin("bcd")).to.equal("bcday");
     expect(pigLatin("bcdfgh")).to.equal("bcdfghay");
+    expect(pigLatin("bcdfghjk")).to.equal("bcdfghjkay");
   });
 });
