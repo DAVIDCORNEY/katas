@@ -12,5 +12,7 @@ describe.only("pigLatin()", () => {
   });
   it('should return a string with a consonant moved to the end and suffixed with "ay" if passed a string beginning with a consonant', () => {
     expect(pigLatin("be")).to.equal("ebay");
+    expect(pigLatin("california")).to.equal("aliforniacay");
+    expect(pigLatin("glove")).to.equal("oveglay");
   });
 });
