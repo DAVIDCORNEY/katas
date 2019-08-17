@@ -14,6 +14,6 @@ describe.only("searchAndReplace()", () => {
   });
   it("should return a string of multiple characters with a character replaced with the passed character maintaining the case of the original character", () => {
     expect(searchAndReplace("Aa", "A", "b")).to.equal("Ba");
-    expect(searchAndReplace("aA", "a", "b")).to.equal("ba");
+    expect(searchAndReplace("aA", "a", "b")).to.equal("bA");
   });
 });
