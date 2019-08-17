@@ -5,4 +5,7 @@ describe.only("searchAndReplace()", () => {
   it("should return an empty string if passed an empty string", () => {
     expect(searchAndReplace("")).to.equal("");
   });
+  it("should return a string with a character replaced with the passed letter", () => {
+    expect(searchAndReplace("a", "a", "b")).to.equal("b");
+  });
 });
