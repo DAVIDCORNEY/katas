@@ -16,4 +16,7 @@ describe.only("searchAndReplace()", () => {
     expect(searchAndReplace("Aa", "A", "b")).to.equal("Ba");
     expect(searchAndReplace("aA", "a", "b")).to.equal("bA");
   });
+  it("should return a string of words with a word replaced with the passed word maintaining the case of the first letter of the original word", () => {
+    expect(searchAndReplace("A Cat", "A", "the")).to.equal("The Cat");
+  });
 });
