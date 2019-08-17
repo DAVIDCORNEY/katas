@@ -18,5 +18,14 @@ describe.only("searchAndReplace()", () => {
   });
   it("should return a string of words with a word replaced with the passed word maintaining the case of the first letter of the original word", () => {
     expect(searchAndReplace("A Cat", "A", "the")).to.equal("The Cat");
+    expect(
+      searchAndReplace("Let us go to the store", "store", "mall")
+    ).to.equal("Let us go to the mall");
+    expect(searchAndReplace("His name is Tom", "Tom", "john")).to.equal(
+      "His name is John"
+    );
+    expect(
+      searchAndReplace("Let us get back to more Coding", "Coding", "algorithms")
+    ).to.equal("Let us get back to more Algorithms");
   });
 });
