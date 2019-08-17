@@ -10,5 +10,6 @@ describe.only("searchAndReplace()", () => {
   });
   it("should return a string with a character replaced with the passed character maintaining the case of the first char of the original character", () => {
     expect(searchAndReplace("A", "A", "b")).to.equal("B");
+    expect(searchAndReplace("a", "a", "B")).to.equal("b");
   });
 });
