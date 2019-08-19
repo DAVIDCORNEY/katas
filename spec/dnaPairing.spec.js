@@ -18,6 +18,6 @@ describe.only("dnaPairing()", () => {
     expect(dnaPairing("T")).to.eql([["T", "A"]]);
   });
   it("should return multiple nested arrays of elements with appropriate pairs, when passed a string of multiple elements", () => {
-    expect(dnaPairing("GC")).to.equal([["G,C"], ["C", "A"]]);
+    expect(dnaPairing("GC")).to.eql([["G", "C"], ["C", "G"]]);
   });
 });
