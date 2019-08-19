@@ -10,6 +10,9 @@ function dnaPairing(str) {
       case "C":
         pairArray.push("C", "G");
         break;
+      case "A":
+        pairArray.push("A", "T");
+        break;
       default:
         console.log("Sorry does not match");
     }
