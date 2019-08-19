@@ -19,5 +19,13 @@ describe.only("dnaPairing()", () => {
   });
   it("should return multiple nested arrays of elements with appropriate pairs, when passed a string of multiple elements", () => {
     expect(dnaPairing("GC")).to.eql([["G", "C"], ["C", "G"]]);
+    expect(dnaPairing("CG")).to.eql([["C", "G"], ["G", "C"]]);
+    expect(dnaPairing("CTCTA")).to.eql([
+      ["C", "G"],
+      ["T", "A"],
+      ["C", "G"],
+      ["T", "A"],
+      ["A", "T"]
+    ]);
   });
 });
