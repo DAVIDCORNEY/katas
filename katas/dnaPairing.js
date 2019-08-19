@@ -13,6 +13,9 @@ function dnaPairing(str) {
       case "A":
         pairArray.push("A", "T");
         break;
+      case "T":
+        pairArray.push("T", "A");
+        break;
       default:
         console.log("Sorry does not match");
     }
