@@ -1,25 +1,23 @@
 function dnaPairing(str) {
   let outerArray = [];
-  let pairArray = [];
   if (str === "") return outerArray;
   for (let i = 0; i < str.length; i++) {
     switch (str[i]) {
       case "G":
-        pairArray.push("G", "C");
+        outerArray.push(["G", "C"]);
         break;
       case "C":
-        pairArray.push("C", "G");
+        outerArray.push(["C", "G"]);
         break;
       case "A":
-        pairArray.push("A", "T");
+        outerArray.push(["A", "T"]);
         break;
       case "T":
-        pairArray.push("T", "A");
+        outerArray.push(["T", "A"]);
         break;
       default:
         console.log("Sorry does not match");
     }
-    outerArray.push(pairArray);
   }
   return outerArray;
 }
