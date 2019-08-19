@@ -1,6 +1,5 @@
 function dnaPairing(str) {
-  let outerArray = [];
-  if (str === "") return outerArray;
+  if (str === "") return [];
   const dna = {
     G: "C",
     C: "G",
@@ -11,6 +10,7 @@ function dnaPairing(str) {
 }
 
 // Revised to use a lookup object and map
+
 // function dnaPairing(str) {
 //   let outerArray = [];
 //   if (str === "") return outerArray;
