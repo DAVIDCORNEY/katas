@@ -14,4 +14,7 @@ describe.only("dnaPairing()", () => {
   it("should return an array with a nested array ['A','T'] when passed a string of a single element 'A' ", () => {
     expect(dnaPairing("A")).to.eql([["A", "T"]]);
   });
+  it("should return an array with a nested array ['T','A'] when passed a string of a single element 'T' ", () => {
+    expect(dnaPairing("T")).to.eql([["T", "A"]]);
+  });
 });
