@@ -10,5 +10,7 @@ describe.only("missingLetters()", () => {
   });
   it("should return the missing letter when passed a string of multiple consecutive letters", () => {
     expect(missingLetter("bcdf")).to.equal("e");
+    expect(missingLetter("stvwx")).to.equal("u");
+    expect(missingLetter("abcdefghjklmno")).to.equal("i");
   });
 });
