@@ -9,6 +9,6 @@ describe.only("missingLetters()", () => {
     expect(missingLetter("ac")).to.equal("b");
   });
   it("should return the missing letter when passed a string of multiple consecutive letters", () => {
-    expect(missingLetter("bcdf")).to.equal("a");
+    expect(missingLetter("bcdf")).to.equal("e");
   });
 });
