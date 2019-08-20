@@ -13,4 +13,7 @@ describe.only("missingLetters()", () => {
     expect(missingLetter("stvwx")).to.equal("u");
     expect(missingLetter("abcdefghjklmno")).to.equal("i");
   });
+  it("should return undefined if no letters are found to be missing", () => {
+    expect(missingLetter("abcdefghijklmnopqrstuvwxyz")).to.be.undefined;
+  });
 });
