@@ -5,7 +5,6 @@ function missingLetter(str) {
       return String.fromCharCode(str[i].charCodeAt() + 1);
     }
   }
-  return undefined;
 }
 
 module.exports = { missingLetter };
