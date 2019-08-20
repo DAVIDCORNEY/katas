@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { dnaPairing } = require("../katas/dnaPairing");
 
-describe.only("dnaPairing()", () => {
+describe("dnaPairing()", () => {
   it("should return an empty array when passed an empty string", () => {
     expect(dnaPairing("")).to.eql([]);
   });
