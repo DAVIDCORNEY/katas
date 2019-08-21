@@ -1,6 +1,8 @@
 const { expect } = require("chai");
 const { sortedUnion } = require("../katas/sortedUnion");
 
-describe("sortedUnion()", () => {
-  it("", () => {});
+describe.only("sortedUnion()", () => {
+  it("should return an empty array if passed an empty array", () => {
+    expect(sortedUnion([])).to.eql([]);
+  });
 });
