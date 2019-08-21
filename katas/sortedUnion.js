@@ -1,7 +1,6 @@
 function sortedUnion(...args) {
-  return args.filter(num => {
-    num.length;
-  });
+  const newArr = [];
+  return newArr.concat(...args);
 }
 
 module.exports = { sortedUnion };
