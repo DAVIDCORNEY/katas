@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { missingLetter } = require("../katas/missingLetter");
 
-describe.only("missingLetters()", () => {
+describe("missingLetters()", () => {
   it("should return an empty string when passed an empty string", () => {
     expect(missingLetter("")).to.equal("");
   });
