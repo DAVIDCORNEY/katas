@@ -13,5 +13,6 @@ describe.only("sortedUnion()", () => {
   });
   it("should return an array of multiple numbers with duplicates removed, when passed two arrays of multiple numbers ", () => {
     expect(sortedUnion([1, 2], [1, 2, 3])).to.eql([1, 2, 3]);
+    expect(sortedUnion([1, 2, 3], [2, 3, 4, 5])).to.eql([1, 2, 3, 4]);
   });
 });
