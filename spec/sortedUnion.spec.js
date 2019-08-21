@@ -8,4 +8,7 @@ describe.only("sortedUnion()", () => {
   it("should return an array of two numbers if passed two arrays each with a unique number", () => {
     expect(sortedUnion([1], [2])).to.eql([1, 2]);
   });
+  it("should return an array of one number if passed two arrays each with the same number", () => {
+    expect(sortedUnion([1], [1])).to.eql([1]);
+  });
 });
