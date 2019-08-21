@@ -11,7 +11,7 @@ describe.only("sortedUnion()", () => {
   it("should return an array of one number if passed two arrays each with the same number", () => {
     expect(sortedUnion([1], [1])).to.eql([1]);
   });
-  it("should return an array of multiple numbers with duplicated removed, when passed two arrays of multiple numbers ", () => {
-    expect(sortedUnion([1, 2], [1, 2, 3])).to.eql([3]);
+  it("should return an array of multiple numbers with duplicates removed, when passed two arrays of multiple numbers ", () => {
+    expect(sortedUnion([1, 2], [1, 2, 3])).to.eql([1, 2, 3]);
   });
 });
