@@ -28,4 +28,7 @@ describe.only("sortedUnion()", () => {
       8
     ]);
   });
+  it("should return an array of multiple numbers,with any nested arrays, where duplicate numbers have been removed, when passed multiple arrays of multiple numbers with nested arrays", () => {
+    expect(sortedUnion([1], [1, 2], [1, 2, [3]])).to.eql([1, 2, [3]]);
+  });
 });
