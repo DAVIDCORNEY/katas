@@ -25,4 +25,7 @@ describe.only("convertHTML()", () => {
       "a &amp; b &lt; c &gt; d &quot;e&quot;"
     );
   });
+  it("should return a string with the ' character replaced by &apos; ", () => {
+    expect(convertHTML("a's")).to.equal("a&apos;");
+  });
 });
