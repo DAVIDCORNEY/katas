@@ -6,9 +6,7 @@ function convertHTML(str) {
     '"': "&quot;",
     "'": "&apos;"
   };
-  return str.replace(/[&<>"']/g, char => {
-    return entities[char];
-  });
+  return str.replace(/[&<>"']/g, char => entities[char]);
 }
 
 module.exports = { convertHTML };
