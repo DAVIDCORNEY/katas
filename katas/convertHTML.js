@@ -7,7 +7,7 @@ function convertHTML(str) {
     "'": "&apos;"
   };
   if (str.length === 0) return "";
-  return str.replace(/[&<>]/g, char => {
+  return str.replace(/[&<>"]/g, char => {
     return entities[char];
   });
 }
