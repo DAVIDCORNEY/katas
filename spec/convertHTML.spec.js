@@ -9,6 +9,6 @@ describe.only("convertHTML()", () => {
     expect(convertHTML("a")).to.equal("a");
   });
   it("should return words if passed a string of words without specified HTML entities", () => {
-    expect(convertHTML("Hello")).to.equal("Hell");
+    expect(convertHTML("Hello")).to.equal("Hello");
   });
 });
