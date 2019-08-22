@@ -28,7 +28,7 @@ describe.only("convertHTML()", () => {
   it("should return a string with the ' character replaced by &apos; ", () => {
     expect(convertHTML("a's")).to.equal("a&apos;s");
   });
-  it('should return a string with the & < > " and apostrophe characters replaced by &amp; &lt; &gt; &quot; &apos; respectively ', () => {
-    expect(convertHTML("Dolce & Gabbana")).to.equal("Dolce & ​amp; Gabbana");
+  it('should return a string of words with the & < > " and apostrophe characters replaced by &amp; &lt; &gt; &quot; &apos; respectively ', () => {
+    expect(convertHTML("Dolce & Gabbana")).to.equal("Dolce &amp; Gabbana");
   });
 });
