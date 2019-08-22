@@ -30,5 +30,14 @@ describe.only("convertHTML()", () => {
   });
   it('should return a string of words with the & < > " and apostrophe characters replaced by &amp; &lt; &gt; &quot; &apos; respectively ', () => {
     expect(convertHTML("Dolce & Gabbana")).to.equal("Dolce &amp; Gabbana");
+    expect(convertHTML("Hamburgers < Pizza < Tacos")).to.equal(
+      "Hamburgers &lt; Pizza &lt; Tacos"
+    );
+    expect(convertHTML("Sixty > twelve")).to.equal("Sixty &gt; twelve");
+    expect(convertHTML('Stuff in "quotation marks"')).to.equal(
+      "Stuff in &quot;quotation marks&quot;"
+    );
+    expect(convertHTML("Schindler's List")).to.equal("Schindler&apos;s List");
+    expect(convertHTML("<>")).to.equal("&lt;&gt;");
   });
 });
