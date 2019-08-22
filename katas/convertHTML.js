@@ -6,7 +6,6 @@ function convertHTML(str) {
     '"': "&quot;",
     "'": "&apos;"
   };
-  if (str.length === 0) return "";
   return str.replace(/[&<>"']/g, char => {
     return entities[char];
   });
