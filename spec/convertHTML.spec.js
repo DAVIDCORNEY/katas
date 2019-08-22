@@ -14,4 +14,7 @@ describe.only("convertHTML()", () => {
   it("should return a string with the & character replaced with &amp;", () => {
     expect(convertHTML("a & b")).to.equal("a &amp; b");
   });
+  it("should return a string with the & and < characters replaced by &amp; and &lt; respectively ", () => {
+    expect(convertHTML("a & b < c")).to.equal("a &amp; b &lt; c");
+  });
 });
