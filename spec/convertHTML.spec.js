@@ -11,4 +11,7 @@ describe.only("convertHTML()", () => {
   it("should return words if passed a string of words without specified HTML entities", () => {
     expect(convertHTML("Hello")).to.equal("Hello");
   });
+  it("should return a string with the & character replaced with &amp;", () => {
+    expect(convertHTML("a & b")).to.equal("a &amp; b");
+  });
 });
