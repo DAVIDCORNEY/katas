@@ -26,6 +26,6 @@ describe.only("convertHTML()", () => {
     );
   });
   it("should return a string with the ' character replaced by &apos; ", () => {
-    expect(convertHTML("a's")).to.equal("a&apos;");
+    expect(convertHTML("a's")).to.equal("a&apos;s");
   });
 });
