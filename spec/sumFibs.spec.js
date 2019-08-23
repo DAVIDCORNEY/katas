@@ -8,4 +8,7 @@ describe.only("sumFibs()", () => {
   it("should return the sum of all odd Fibonacci Numbers when passed an integer of num", () => {
     expect(sumFibs(3)).to.equal(5);
   });
+  it("should return the sum of all odd Fibonacci Numbers when passed an integer of num", () => {
+    expect(sumFibs(4)).to.equal(5);
+  });
 });
