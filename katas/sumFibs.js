@@ -1,12 +1,10 @@
 function sumFibs(num) {
   const fibNums = [1, 1];
   let index = 0;
-  let count = 0;
   if (num <= 1) return num;
-  while (count < num) {
+  while (fibNums[index] + fibNums[index + 1] <= num) {
     fibNums.push(fibNums[index] + fibNums[index + 1]);
     index++;
-    count = fibNums[fibNums.length - 1];
   }
   const sum = fibNums.reduce((acc, curr) => {
     if (curr % 2 === 1) {
