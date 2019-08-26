@@ -1,3 +1,5 @@
-function sumPrimes(num) {}
+function sumPrimes(num) {
+  return num;
+}
 
 module.exports = { sumPrimes };
