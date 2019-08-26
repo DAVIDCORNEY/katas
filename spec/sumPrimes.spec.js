@@ -7,5 +7,6 @@ describe.only("sumPrimes()", () => {
   });
   it("should return the sum of all prime numbers up to and including the passed number ", () => {
     expect(sumPrimes(10)).to.equal(17);
+    expect(sumPrimes(977)).to.equal(73156);
   });
 });
