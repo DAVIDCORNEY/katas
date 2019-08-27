@@ -1,5 +1,5 @@
-function smallestCommons(num) {
-  return num;
+function smallestCommons(arr) {
+  return arr[0];
 }
 
 module.exports = { smallestCommons };
