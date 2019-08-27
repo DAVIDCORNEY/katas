@@ -3,27 +3,16 @@
 //if not increase max by itself and do the same procedure again
 
 function smallestCommons(arr) {
-  let max = Math.max(...arr);
-  const min = Math.min(...arr);
-  let maxNum = max;
+  const sorted = arr.sort((a, b) => (a > b ? 1 : -1));
 
-  const newArr = [];
-  for (let i = min; i <= max; i++) {
-    newArr.push(i);
-  }
-
-  function checkDividers(newArr, maxNum) {
-    for (let i = 0; i < newArr.length; i++) {
-      if (maxNum % i !== 0) {
-        return false;
-      }
+  let [min, max] = sorted;
+  while (min < sorted[1]) {
+    if (max % min === 0) {
+      min++;
+    } else {
+      max += sorted[1];
+      min = sorted[0];
     }
-    return true;
-  }
-
-  if (checkDividers(newArr, maxNum) === false) {
-    maxNum += max;
-    return maxNum;
   }
   return max;
 }
