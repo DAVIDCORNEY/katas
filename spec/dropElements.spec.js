@@ -31,4 +31,11 @@ describe.only("dropElements()", () => {
       })
     ).to.eql([3, 4]);
   });
+  it("Should return an array filtered by whether it is === to a number stated in the function starting from the first element until the function returns true", () => {
+    expect(
+      dropElements([0, 1, 0, 1], function(n) {
+        return n === 1;
+      })
+    ).to.eql([1, 0, 1]);
+  });
 });
