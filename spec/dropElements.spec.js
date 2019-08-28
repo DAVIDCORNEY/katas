@@ -44,5 +44,20 @@ describe.only("dropElements()", () => {
         return n > 0;
       })
     ).to.eql([1, 2, 3]);
+    expect(
+      dropElements([1, 2, 3, 7, 4], function(n) {
+        return n > 3;
+      })
+    ).to.eql([7, 4]);
+    expect(
+      dropElements([1, 2, 3, 9, 2], function(n) {
+        return n > 2;
+      })
+    ).to.eql([3, 9, 2]);
+    expect(
+      dropElements([1, 2, 3, 4], function(n) {
+        return n > 5;
+      })
+    ).to.eql([]);
   });
 });
