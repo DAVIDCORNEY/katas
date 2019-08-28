@@ -15,5 +15,15 @@ describe.only("dropElements()", () => {
         return n >= 1;
       })
     ).to.eql([1]);
+    expect(
+      dropElements([1, 2], function(n) {
+        return n >= 1;
+      })
+    ).to.eql([1, 2]);
+    expect(
+      dropElements([1, 1], function(n) {
+        return n >= 1;
+      })
+    ).to.eql([1, 1]);
   });
 });
