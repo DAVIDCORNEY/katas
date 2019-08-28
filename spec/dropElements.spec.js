@@ -43,6 +43,6 @@ describe.only("dropElements()", () => {
       dropElements([1, 2, 3], function(n) {
         return n > 0;
       })
-    ).to.eql([1, 2, 2]);
+    ).to.eql([1, 2, 3]);
   });
 });
