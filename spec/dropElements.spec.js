@@ -13,7 +13,7 @@ describe.only("dropElements()", () => {
     expect(
       dropElements([1], function(n) {
         return n >= 1;
-      }).to.eql([1])
-    );
+      })
+    ).to.eql([1]);
   });
 });
