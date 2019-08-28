@@ -38,4 +38,11 @@ describe.only("dropElements()", () => {
       })
     ).to.eql([1, 0, 1]);
   });
+  it("Should return an array filtered by whether it is > than a number stated in the function starting from the first element until the function returns true", () => {
+    expect(
+      dropElements([1, 2, 3], function(n) {
+        return n > 0;
+      })
+    ).to.eql([1, 2, 2]);
+  });
 });
