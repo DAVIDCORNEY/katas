@@ -16,5 +16,9 @@ describe.only("steamRoller()", () => {
   });
   it("should return a flattened array when passed an array of multiple nested arrays ", () => {
     expect(steamRoller([[1], [2]])).to.eql([1, 2]);
+    expect(steamRoller([[["a"]], [["b"]]])).to.eql(["a", "b"]);
+    expect(steamRoller([1, [2], [3, [[4]]]])).to.eql([1, 2, 3, 4]);
+    expect(steamRoller([1, [], [3, [[4]]]])).to.eql([1, 3, 4]);
+    expect(steamRoller([1, {}, [3, [[4]]]])).to.eql([1, {}, 3, 4]);
   });
 });
