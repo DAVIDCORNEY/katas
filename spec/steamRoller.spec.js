@@ -11,4 +11,7 @@ describe.only("steamRoller()", () => {
   it("should return an array with multiple elements if passed an array with multiple elements", () => {
     expect(steamRoller([1, 2])).to.eql([1, 2]);
   });
+  it("should return a flattened array when passed two arrays each with one element", () => {
+    expect(steamRoller([1], [2])).to.eql([1, 2]);
+  });
 });
