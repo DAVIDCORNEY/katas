@@ -1,8 +1,8 @@
 const { expect } = require("chai");
-const { binaryAgent } = require("binaryAgent");
+const { binaryAgent } = require("../katas/binaryAgent");
 
-describe("binaryAgent()", () => {
-  it("should return a string when passed a string", () => {
+describe.only("binaryAgent()", () => {
+  it("should return an empty string when passed an empty string", () => {
     expect(binaryAgent("")).to.equal("");
   });
 });
