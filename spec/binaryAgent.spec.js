@@ -12,5 +12,11 @@ describe.only("binaryAgent()", () => {
   });
   it("should return an English word when passed a binary string", () => {
     expect(binaryAgent("01001001 01110100")).to.equal("It");
+    expect(binaryAgent("01100110 01110101 01101110")).to.equal("fun");
+    expect(
+      binaryAgent(
+        "01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000"
+      )
+    ).to.equal("FreeCodeCamp");
   });
 });
