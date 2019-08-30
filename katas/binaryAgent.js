@@ -1,3 +1,5 @@
-function binaryAgent(str) {}
+function binaryAgent(str) {
+  return str;
+}
 
 module.exports = { binaryAgent };
