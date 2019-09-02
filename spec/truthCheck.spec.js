@@ -14,7 +14,15 @@ describe.only("truthCheck()", () => {
   });
   it("returns a boolean when passed an array with multiple objects each with a single key value pairs and a predicate", () => {
     const input1 = [{ sex: "male" }, { sex: "female" }];
-    const input2 = [];
     expect(truthCheck(input1, "sex")).to.eql(true);
+  });
+  it("returns a boolean when passed an array with multiple objects each with multiple key value pairs and a predicate", () => {
+    const input = [
+      { user: "Tinky-Winky", sex: "male" },
+      { user: "Dipsy", sex: "male" },
+      { user: "Laa-Laa", sex: "female" },
+      { user: "Po", sex: "female" }
+    ];
+    expect(truthCheck(input, "sex")).to.eql(true);
   });
 });
