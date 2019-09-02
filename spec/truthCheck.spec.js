@@ -10,5 +10,6 @@ describe.only("truthCheck()", () => {
   it("returns a boolean when passed an array of an object with multiple key value pairs and a predicate", () => {
     const input = [{ user: "Tinky-Winky", sex: "male" }];
     expect(truthCheck(input, "sex")).to.eql(true);
+    expect(truthCheck(input, "age")).to.eql(false);
   });
 });
