@@ -1,7 +1,5 @@
 function truthCheck(arr, pre) {
-  return arr.every(function(obj) {
-    return obj[pre];
-  });
+  return arr.every(obj => obj[pre]);
 }
 
 module.exports = { truthCheck };
