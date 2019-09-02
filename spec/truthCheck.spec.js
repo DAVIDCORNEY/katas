@@ -12,4 +12,11 @@ describe.only("truthCheck()", () => {
     expect(truthCheck(input, "sex")).to.eql(true);
     expect(truthCheck(input, "age")).to.eql(false);
   });
+  it("returns a boolean when passed an array with multiple objects each with a single key value pairs and a predicate", () => {
+    const input = [
+      { user: "Tinky-Winky", sex: "male" },
+      { user: "Dipsy", sex: "male" }
+    ];
+    expect(truthCheck(input, "sex")).to.eql(true);
+  });
 });
