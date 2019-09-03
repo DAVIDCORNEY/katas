@@ -1,7 +1,5 @@
 function addTogether(...num) {
-  const nums = num.every(item => {
-    return typeof item === "number";
-  });
+  const nums = num.every(item => typeof item === "number");
   if (nums !== false && num.length === 2) {
     return num[0] + num[1];
   } else if (nums !== false && num.length === 1) {
