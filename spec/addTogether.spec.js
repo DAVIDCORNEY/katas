@@ -13,4 +13,8 @@ describe.only("addTogether()", () => {
   it("should return a function when passed an argument of one number", () => {
     expect(addTogether(1)).to.be.a("function");
   });
+  it("should return the sum of passed arguments on invocation of the returned function", () => {
+    const sumTwoAnd = addTogether(2);
+    expect(sumTwoAnd(3)).to.equal(5);
+  });
 });
