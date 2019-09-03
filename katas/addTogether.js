@@ -1,6 +1,8 @@
 function addTogether(...num) {
-  const [num1, num2] = num;
-  return num1 + num2;
+  const nums = num.every(item => {
+    return typeof item === "number";
+  });
+  if (!nums) return undefined;
 }
 
 module.exports = { addTogether };
