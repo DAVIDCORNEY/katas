@@ -7,4 +7,7 @@ describe.only("addTogether()", () => {
     expect(addTogether(1, "2")).to.be.undefined;
     expect(addTogether("http://bit.ly/IqT6zt")).to.be.undefined;
   });
+  it("should return the sum of two numbers passed as arguments", () => {
+    expect(addTogether(1, 2)).to.equal(3);
+  });
 });
