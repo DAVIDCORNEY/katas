@@ -17,4 +17,8 @@ describe.only("addTogether()", () => {
     const sumTwoAnd = addTogether(2);
     expect(sumTwoAnd(3)).to.equal(5);
   });
+  it("should return undefined if the argument passed into the returned function is not a number", () => {
+    const sumTwoAnd = addTogether(2);
+    expect(sumTwoAnd([3])).to.be.undefined;
+  });
 });
