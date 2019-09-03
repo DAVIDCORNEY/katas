@@ -10,4 +10,7 @@ describe.only("addTogether()", () => {
   it("should return the sum of two numbers passed as arguments", () => {
     expect(addTogether(1, 2)).to.equal(3);
   });
+  it("should return a function when passed an argument of one number", () => {
+    expect(addTogether(1)).to.be.a("function");
+  });
 });
