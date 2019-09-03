@@ -2,5 +2,7 @@ const { expect } = require("chai");
 const { addTogether } = require("../katas/addTogether");
 
 describe("addTogether()", () => {
-  it("", () => {});
+  it("should return the sum of two arguments if passed two argumets", () => {
+    expect(addTogether(1, 2)).to.equal(3);
+  });
 });
