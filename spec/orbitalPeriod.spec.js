@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { orbitalPeriod } = require("../katas/orbitalPeriod");
 
-describe.only("orbitalPeriod()", () => {
+describe("orbitalPeriod()", () => {
   it("should return a new empty array when passed an array", () => {
     const input = [];
     const expected = [];
@@ -14,8 +14,9 @@ describe.only("orbitalPeriod()", () => {
     expect(result[0]).to.have.property("name");
     expect(result[0]).to.have.property("orbitalPeriod");
   });
-  it("should return a new array of one object with average altitude transformed into orbital period in seconds when passed an array of one object", () => {
+  it.only("should return a new array of one object with average altitude transformed into orbital period in seconds when passed an array of one object", () => {
     const input = [{ name: "sputnik", avgAlt: 35873.5553 }];
     const result = [{ name: "sputnik", orbitalPeriod: 86400 }];
+    expect(orbitalPeriod(input)).to.eql(result);
   });
 });
