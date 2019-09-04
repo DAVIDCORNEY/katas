@@ -9,7 +9,6 @@ function orbitalPeriod(arr) {
         let orbitalP = Math.round(
           2 * Math.PI * Math.sqrt(Math.pow(earthRadius + obj[key], 3) / GM)
         );
-        console.log(orbitalP);
         newObj["orbitalPeriod"] = orbitalP;
       } else {
         newObj[key] = obj[key];
