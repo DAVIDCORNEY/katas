@@ -14,4 +14,8 @@ describe.only("orbitalPeriod()", () => {
     expect(result[0]).to.have.property("name");
     expect(result[0]).to.have.property("orbitalPeriod");
   });
+  it("should return a new array of one object with average altitude transformed into orbital period in seconds when passed an array of one object", () => {
+    const input = [{ name: "sputnik", avgAlt: 35873.5553 }];
+    const result = [{ name: "sputnik", orbitalPeriod: 86400 }];
+  });
 });
