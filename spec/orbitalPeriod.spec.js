@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { orbitalPeriod } = require("../katas/orbitalPeriod");
 
-describe.only("orbitalPeriod()", () => {
+describe("orbitalPeriod()", () => {
   it("should return a new empty array when passed an array", () => {
     const input = [];
     const expected = [];
