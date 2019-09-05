@@ -41,4 +41,7 @@ describe.only("convertToRoman()", () => {
   it("should return DI when passed 501", () => {
     expect(convertToRoman(501)).to.equal("DI");
   });
+  it("should return DCCXCVIII when passed 798", () => {
+    expect(convertToRoman(798)).to.equal("DCCXCVIII");
+  });
 });
