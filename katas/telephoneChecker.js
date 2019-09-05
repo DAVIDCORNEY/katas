@@ -1,9 +1,7 @@
 function telephoneChecker(str) {
-  if (str) {
-    return true;
-  } else {
-    return false;
-  }
+  const regex = /[0-9]/g;
+  let result = regex.test(str);
+  return result;
 }
 
 module.exports = { telephoneChecker };
