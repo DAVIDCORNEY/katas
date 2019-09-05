@@ -5,4 +5,7 @@ describe.only("convertToRoman()", () => {
   it("should return I when passed 1 ", () => {
     expect(convertToRoman(1)).to.equal("I");
   });
+  it("should return II when passed 2", () => {
+    expect(convertToRoman(2)).to.equal("II");
+  });
 });
