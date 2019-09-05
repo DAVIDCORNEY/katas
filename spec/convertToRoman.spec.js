@@ -32,4 +32,7 @@ describe.only("convertToRoman()", () => {
   it("should return LXVIII when passed 68", () => {
     expect(convertToRoman(68)).to.equal("LXVIII");
   });
+  it("should return XCIX when passed 99", () => {
+    expect(convertToRoman(99)).to.equal("XCIX");
+  });
 });
