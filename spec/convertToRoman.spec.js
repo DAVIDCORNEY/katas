@@ -26,4 +26,7 @@ describe.only("convertToRoman()", () => {
   it("should return XXIX when passed 29", () => {
     expect(convertToRoman(29)).to.equal("XXIX");
   });
+  it("should return XLV when passed 45", () => {
+    expect(convertToRoman(45)).to.equal("XLV");
+  });
 });
