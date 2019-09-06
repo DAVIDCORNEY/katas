@@ -50,4 +50,7 @@ describe.only("telephoneChecker()", () => {
   it("should return false when passed a US phone number string of the format '2 757 622-7382' ", () => {
     expect(telephoneChecker("2 757 622-7382")).to.be.false;
   });
+  it("should return false when passed a US phone number string of the format '27576227382' ", () => {
+    expect(telephoneChecker("27576227382")).to.be.false;
+  });
 });
