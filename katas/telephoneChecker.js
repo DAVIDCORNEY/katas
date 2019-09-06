@@ -1,7 +1,6 @@
 function telephoneChecker(str) {
-  const regex = /(\(\d{3}\)\d{3}-\d{4})|\d{3}-\d{3}-\d{4}|/g;
-  let result = regex.test(str);
-  return result;
+  const regex = /(\([0-9]{3}\)\s*[0-9]{3}-[0-9]{4})|[0-9]{3}-[0-9]{3}-[0-9]{4}/g;
+  return regex.test(str);
 }
 
 module.exports = { telephoneChecker };
