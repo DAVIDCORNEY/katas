@@ -32,4 +32,7 @@ describe.only("telephoneChecker()", () => {
   it("should return false when passed a US phone number string of the format '123**&!!asdf#' ", () => {
     expect(telephoneChecker("123**&!!asdf#")).to.be.false;
   });
+  it("should return false when passed a US phone number string of the format '55555555' ", () => {
+    expect(telephoneChecker("55555555")).to.be.false;
+  });
 });
