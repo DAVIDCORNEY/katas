@@ -38,4 +38,7 @@ describe.only("telephoneChecker()", () => {
   it("should return false when passed a US phone number string of the format '(6054756961)' ", () => {
     expect(telephoneChecker("(6054756961)")).to.be.false;
   });
+  it("should return false when passed a US phone number string of the format '2 (757) 622-7382' ", () => {
+    expect(telephoneChecker("2 (757) 622-7382")).to.be.false;
+  });
 });
