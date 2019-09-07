@@ -52,7 +52,7 @@ describe.only("checkCashRegister()", () => {
         ["NICKEL", 0],
         ["DIME", 0],
         ["QUARTER", 0],
-        ["ONE", 1],
+        ["ONE", 0],
         ["FIVE", 0],
         ["TEN", 0],
         ["TWENTY", 0],
