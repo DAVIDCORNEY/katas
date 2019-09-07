@@ -17,7 +17,7 @@ describe.only("checkCashRegister()", () => {
       ])
     ).to.be.an("object");
   });
-  it("should return an object with key value pairs of status:'closed' and change: set to the cid array ", () => {
+  it("should return an object with key value pairs of status:'closed' and change: set to the cid array, if the change due is equal to the value of cash in the till ", () => {
     expect(
       checkCashRegister(19.5, 20, [
         ["PENNY", 0.5],
