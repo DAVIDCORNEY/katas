@@ -8,6 +8,9 @@ function checkCashRegister(price, cash, cid) {
   if (changeDue === tillTotal) {
     changeStatus["status"] = "CLOSED";
     changeStatus["change"] = cid;
+  } else if (changeDue > tillTotal) {
+    changeStatus["status"] = "INSUFFICIENT_FUNDS";
+    changeStatus["change"] = [];
   }
   return changeStatus;
 }
