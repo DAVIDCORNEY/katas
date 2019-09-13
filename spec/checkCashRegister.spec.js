@@ -75,4 +75,30 @@ describe.only("checkCashRegister()", () => {
       ])
     ).to.eql({ status: "OPEN", change: [["ONE", 1]] });
   });
+  it("should return an object with key value pairs of status:'OPEN' and change: set to an array of a number of denominations making up the change due", () => {
+    expect(
+      checkCashRegister(3.26, 100, [
+        ["PENNY", 1.01],
+        ["NICKEL", 2.05],
+        ["DIME", 3.1],
+        ["QUARTER", 4.25],
+        ["ONE", 90],
+        ["FIVE", 55],
+        ["TEN", 20],
+        ["TWENTY", 60],
+        ["ONE HUNDRED", 100]
+      ])
+    ).to.eql({
+      status: "OPEN",
+      change: [
+        ["TWENTY", 60],
+        ["TEN", 20],
+        ["FIVE", 15],
+        ["ONE", 1],
+        ["QUARTER", 0.5],
+        ["DIME", 0.2],
+        ["PENNY", 0.04]
+      ]
+    });
+  });
 });
