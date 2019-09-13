@@ -62,7 +62,7 @@ describe.only("checkCashRegister()", () => {
   });
   it("should return an object with key value pairs of status:'OPEN' and change: set to an array of the change due", () => {
     expect(
-      checkCashRegister(19.5, 20, [
+      checkCashRegister(19, 20, [
         ["PENNY", 1.01],
         ["NICKEL", 2.05],
         ["DIME", 3.1],
@@ -73,6 +73,6 @@ describe.only("checkCashRegister()", () => {
         ["TWENTY", 60],
         ["ONE HUNDRED", 100]
       ])
-    ).to.eql({ status: "OPEN", change: [["QUARTER", 0.5]] });
+    ).to.eql({ status: "OPEN", change: [["ONE", 1]] });
   });
 });
