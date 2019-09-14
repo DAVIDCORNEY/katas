@@ -1,5 +1,7 @@
 function checkCashRegister(price, cash, cid) {
-  let changeDue = cash - price;
+  const changeToCustomer = cash - price;
+
+  let changeDue = changeToCustomer;
 
   const tillTotal = cid.reduce((acc, curr) => acc + curr[1], 0);
 
@@ -32,7 +34,6 @@ function checkCashRegister(price, cash, cid) {
         let denomination = money[i][1];
         let numOfDenomination =
           Math.floor(changeDue.toFixed(2) / denomination) * money[i][1];
-        console.log(changeDue, denomination, numOfDenomination);
         if (cid[i][1] <= numOfDenomination) {
           changeStatus.change.push([cid[i][0], cid[i][1]]);
           changeDue -= cid[i][1];
@@ -43,16 +44,18 @@ function checkCashRegister(price, cash, cid) {
           cid[i][1] -= numOfDenomination;
         }
       }
-      console.log(changeDue);
     }
   }
-  return changeStatus;
+
+  const changeTotal = changeStatus.change.reduce(
+    (acc, curr) => acc + curr[1],
+    0
+  );
+  if ((changeTotal * 100) / 100 === changeToCustomer) {
+    return changeStatus;
+  } else {
+    return { status: "INSUFFICIENT_FUNDS", change: [] };
+  }
 }
 
 module.exports = { checkCashRegister };
-
-//work out the difference between the price and cash given and store in a variable "changeDue"
-//work out the total value of all the cash in the till and store in a variable "tillTotal"
-//if tillTotal is less than changeDue then return {status: "INSUFFICIENT_FUNDS", change: []}
-//if tillTotal is the same as changeDue then return {status: "CLOSED", change: [all cid]}
-//
