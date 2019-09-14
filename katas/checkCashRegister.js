@@ -28,7 +28,7 @@ function checkCashRegister(price, cash, cid) {
     changeStatus["change"] = [];
   } else if (changeDue < tillTotal) {
     for (let i = money.length - 1; i >= 0; i--) {
-      while (changeDue >= money[i][1]) {
+      while (changeDue >= money[i][1] && cid[i][1] > 0) {
         let denomination = money[i][1];
         let numOfDenomination =
           Math.floor(changeDue.toFixed(2) / denomination) * money[i][1];
@@ -36,9 +36,11 @@ function checkCashRegister(price, cash, cid) {
         if (cid[i][1] <= numOfDenomination) {
           changeStatus.change.push([cid[i][0], cid[i][1]]);
           changeDue -= cid[i][1];
+          cid[i][1] = 0;
         } else if (cid[i][1] >= numOfDenomination) {
           changeStatus.change.push([cid[i][0], numOfDenomination]);
           changeDue -= numOfDenomination;
+          cid[i][1] -= numOfDenomination;
         }
       }
       console.log(changeDue);
