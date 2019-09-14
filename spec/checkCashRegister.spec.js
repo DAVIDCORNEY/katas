@@ -101,4 +101,22 @@ describe.only("checkCashRegister()", () => {
       ]
     });
   });
+  it("should return an object with key value pairs of status:'INSUFFICIENT_FUNDS' and change: [],  if the change due cannot be returned from the change in the passed array", () => {
+    expect(
+      checkCashRegister(19.5, 20, [
+        ["PENNY", 0.01],
+        ["NICKEL", 0],
+        ["DIME", 0],
+        ["QUARTER", 0],
+        ["ONE", 1],
+        ["FIVE", 0],
+        ["TEN", 0],
+        ["TWENTY", 0],
+        ["ONE HUNDRED", 0]
+      ])
+    ).to.eql({
+      status: "INSUFFICIENT_FUNDS",
+      change: []
+    });
+  });
 });
