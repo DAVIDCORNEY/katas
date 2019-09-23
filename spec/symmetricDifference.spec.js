@@ -6,6 +6,6 @@ describe.only("sym", () => {
     expect(sym([])).to.eql([]);
   });
   it("will return an array of one number when passed an array of one number", () => {
-    expect(sym([1])).to.equal([1]);
+    expect(sym([1])).to.eql([1]);
   });
 });
