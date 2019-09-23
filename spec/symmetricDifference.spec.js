@@ -8,4 +8,7 @@ describe.only("sym", () => {
   it("will return an array of one number when passed an array of one number", () => {
     expect(sym([1])).to.eql([1]);
   });
+  it("will return an array of multiple numbers without duplicates when passed an array of multiple numbers without duplicates ", () => {
+    expect(sym([1, 2])).to.eql([1, 2]);
+  });
 });
