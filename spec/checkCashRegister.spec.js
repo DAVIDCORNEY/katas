@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { checkCashRegister } = require("../katas/checkCashRegister");
 
-describe.only("checkCashRegister()", () => {
+describe("checkCashRegister()", () => {
   it("should return an object when passed an array", () => {
     expect(
       checkCashRegister(19.5, 20, [
