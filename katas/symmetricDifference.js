@@ -8,7 +8,7 @@ function sym(...args) {
       return total;
     }, []);
   });
-  const synNums = [].concat(...symmetricNums);
+  const synNums = [].concat(...symmetricNums).sort((a, b) => a - b);
   const newArr = [];
   for (let i = 0; i < synNums.length; i++) {
     if (
