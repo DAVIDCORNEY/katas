@@ -1,12 +1,24 @@
-function sym(args) {
-  if (args.length === 0) return [];
-  const symmetricNums = args.reduce((total, curr) => {
-    if (!total.includes(curr)) {
-      total.push(curr);
+function sym(...args) {
+  if (args[0].length === 0) return [];
+  const symmetricNums = args.map(function(arg) {
+    return arg.reduce((total, curr) => {
+      if (!total.includes(curr)) {
+        total.push(curr);
+      }
+      return total;
+    }, []);
+  });
+  const synNums = [].concat(...symmetricNums);
+  const newArr = [];
+  for (let i = 0; i < synNums.length; i++) {
+    if (
+      synNums.indexOf(synNums[i]) === i &&
+      synNums.indexOf(synNums[i], i + 1) === -1
+    ) {
+      newArr.push(synNums[i]);
     }
-    return total;
-  }, []);
-  return symmetricNums;
+  }
+  return newArr;
 }
 
 module.exports = { sym };
