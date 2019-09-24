@@ -8,10 +8,13 @@ describe.only("sym", () => {
   it("will return an array of one number when passed an array of one number", () => {
     expect(sym([1])).to.eql([1]);
   });
-  it("will return an array of multiple numbers when passed an array of multiple numbers", () => {
+  it("will return an array of multiple numbers without duplicates when passed an array of multiple numbers without duplicates ", () => {
     expect(sym([1, 2])).to.eql([1, 2]);
   });
-  it("will return a single array of numbers with numbers that are present in either set of two passed arrays,but not both", () => {
+  it("will return an array of multiple numbers without duplicates when passed an array of numbers with duplicates", () => {
+    expect(sym([1, 2, 2])).to.eql([1, 2]);
+  });
+  it("will return a single array of numbers without duplicates and without numbers present in both passed arrays", () => {
     expect(sym([1, 2], [2])).to.eql([1]);
   });
 });
