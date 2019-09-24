@@ -18,4 +18,7 @@ describe.only("sym", () => {
     expect(sym([1, 2], [2])).to.eql([1]);
     expect(sym([1, 2, 3], [5, 2, 1, 4])).to.eql([3, 4, 5]);
   });
+  it("will return a single array of numbers without duplicates and without numbers present in multiple passed arrays", () => {
+    expect(sym([1, 2, 5], [2, 3, 5], [3, 4, 5])).to.eql([1, 4, 5]);
+  });
 });
