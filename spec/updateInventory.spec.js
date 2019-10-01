@@ -20,4 +20,9 @@ describe.only("updateInventory", () => {
       )
     ).to.eql([[63, "Bowling Ball"], [6, "Cricket Ball"]]);
   });
+  it("should return array1 with any items added that are present array2, but not initially present in array 1 ", () => {
+    expect(
+      updateInventory([[21, "Bowling Ball"]], [[2, "Cricket Ball"]])
+    ).to.eql([[21, "Bowling Ball"], [2, "Cricket Ball"]]);
+  });
 });
