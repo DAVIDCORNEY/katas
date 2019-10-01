@@ -7,4 +7,9 @@ describe.only("updateInventory", () => {
       [21, "Bowling Ball"]
     ]);
   });
+  it("should return array1 with the inventory item quantity updated if the inventory item is present in array2", () => {
+    expect(
+      updateInventory([[21, "Bowling Ball"]], [[67, "Bowling Ball"]])
+    ).to.eql([[88, "Bowling Ball"]]);
+  });
 });
