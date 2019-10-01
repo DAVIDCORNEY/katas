@@ -33,4 +33,12 @@ describe.only("updateInventory", () => {
       )
     ).to.eql([[21, "Bowling Ball"], [6, "Cricket Ball"], [3, "Snooker Balls"]]);
   });
+  it("should return array1 in alphabetical order with the inventory item quantity of items updated from the same items in array 2 and must include any other items present in array2 that are not in array 1", () => {
+    expect(
+      updateInventory(
+        [[4, "Cricket Ball"], [21, "Bowling Ball"]],
+        [[3, "Snooker Balls"], [2, "Cricket Ball"]]
+      )
+    ).to.eql([[21, "Bowling Ball"], [6, "Cricket Ball"], [3, "Snooker Balls"]]);
+  });
 });
