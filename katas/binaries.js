@@ -1,12 +1,17 @@
 function binaries(str) {
   let codeStr = "";
+
   const strArr = str.split("");
-  strArr.forEach(num => {
+
+  function generateCode(num) {
     let binary = Number(num).toString(2);
-    let binaryLength = binary.length;
-    let preBinary = "0".repeat(binaryLength - 1) + "1";
-    let code = preBinary + binary;
+    let preBinary = "0".repeat(binary.length - 1) + "1";
+    let code = preBinary.concat(binary);
     codeStr += code;
+  }
+
+  strArr.forEach(num => {
+    generateCode(num);
   });
   return codeStr;
 }
