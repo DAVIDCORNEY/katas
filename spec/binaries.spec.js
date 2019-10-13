@@ -20,4 +20,7 @@ describe.only("binaries()", () => {
   it("Should return '0011110011110111011100011000' when passed string of '77338'", () => {
     expect(binaries("77338")).to.equal("0011110011110111011100011000");
   });
+  it("Should return '1010111111011011011111001100' when passed string of '0011121314'", () => {
+    expect(binaries("0011121314")).to.equal("1010111111011011011111001100");
+  });
 });
