@@ -14,4 +14,7 @@ describe.only("binaries()", () => {
   it("Should return 001101 when passed string of 5", () => {
     expect(binaries("5")).to.equal("001101");
   });
+  it("Should return 1011 when passed string of 01", () => {
+    expect(binaries("01")).to.equal("1011");
+  });
 });
