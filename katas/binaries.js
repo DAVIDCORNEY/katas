@@ -16,4 +16,6 @@ function binaries(str) {
   return codeStr;
 }
 
-module.exports = { binaries };
+function decode() {}
+
+module.exports = { binaries, decode };
