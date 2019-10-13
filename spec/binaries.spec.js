@@ -29,4 +29,9 @@ describe.only("decode()", () => {
   it("Should return '07'when passed a string of '10001111'", () => {
     expect(decode("10001111")).to.equal("07");
   });
+  it("Should return '77338855'when passed a string of '001111001111011101110001100000011000001101001101'", () => {
+    expect(decode("001111001111011101110001100000011000001101001101")).to.equal(
+      "77338855"
+    );
+  });
 });
