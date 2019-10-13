@@ -34,4 +34,7 @@ describe.only("decode()", () => {
       "77338855"
     );
   });
+  it("Should return '0011121314'when passed a string of '1010111111011011011111001100'", () => {
+    expect(decode("1010111111011011011111001100")).to.equal("0011121314");
+  });
 });
