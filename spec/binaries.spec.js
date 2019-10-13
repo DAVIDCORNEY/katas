@@ -1,7 +1,7 @@
 const { expect } = require("chai");
-const { binaries } = require("../katas/binaries");
+const { binaries, decode } = require("../katas/binaries");
 
-describe.only("binaries()", () => {
+describe("binaries()", () => {
   it("Should return '10' when passed string of '0'", () => {
     expect(binaries("0")).to.equal("10");
   });
@@ -22,5 +22,11 @@ describe.only("binaries()", () => {
   });
   it("Should return '1010111111011011011111001100' when passed string of '0011121314'", () => {
     expect(binaries("0011121314")).to.equal("1010111111011011011111001100");
+  });
+});
+
+describe.only("decode()", () => {
+  it("Should return '07'when passed a string of '10001111'", () => {
+    expect(decode("10001111")).to.equal("07");
   });
 });
