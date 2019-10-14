@@ -25,7 +25,7 @@ describe("binaries()", () => {
   });
 });
 
-describe.only("decode()", () => {
+describe("decode()", () => {
   it("Should return '07'when passed a string of '10001111'", () => {
     expect(decode("10001111")).to.equal("07");
   });
