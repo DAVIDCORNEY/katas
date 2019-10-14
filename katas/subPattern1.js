@@ -1,18 +1,12 @@
 function subPattern1(str) {
-  if (str.length < 2) return false;
-  if (str.length % 2 === 0) {
-    let firstHalf = str.substring(0, str.length / 2);
-    let secondHalf = str.substring(str.length / 2, str.length);
-    return firstHalf === secondHalf ? true : false;
-  } else if (str.length % 2 !== 0) {
-    let regex = /[A-Ba-b0-9]{1}/g;
-    let matches = str.match(regex);
-    if (matches.length === str.length) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  const string = str + str;
+  return string.indexOf(str, 1) !== str.length ? true : false;
 }
 
 module.exports = { subPattern1 };
+
+//return /^(.+)\1+$/.test(str);
+
+// ^ and $ stands for start and end anchors to predict the position.
+// (.+) captures any pattern and captures the value(except \n).
+// \1 is backreference of first captured value and \1 + would check for repetition of captured value.
