@@ -17,4 +17,7 @@ describe.only("subPattern1()", () => {
   it("should return false when passed a string with three chars that are not the same", () => {
     expect(subPattern1("abc")).to.be.false;
   });
+  it("should return true when passed a string with four chars where there is a repeating pattern", () => {
+    expect(subPattern1("abab")).to.be.true;
+  });
 });
