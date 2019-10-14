@@ -1,3 +1,5 @@
-function subPattern1(str) {}
+function subPattern1(str) {
+  if (str.length < 2) return false;
+}
 
-module.exports = { subPattern };
+module.exports = { subPattern1 };
