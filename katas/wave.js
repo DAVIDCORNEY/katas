@@ -10,9 +10,10 @@ function wave(str) {
       } else {
         waveStr += str[i];
       }
-      count++;
     }
+    count++;
     waveArr.push(waveStr);
+    waveStr = "";
   }
   return waveArr;
 }
