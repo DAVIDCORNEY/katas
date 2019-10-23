@@ -11,4 +11,7 @@ describe.only("wave()", () => {
   it("should return an array of two strings of 2 letters with each capitalised in turn when passed a string of two letters", () => {
     expect(wave("ab")).to.eql(["Ab", "aB"]);
   });
+  it("should return an array of three strings of 3 letters with each capitalised in turn when passed a string of three letters", () => {
+    expect(wave("gap")).to.eql(["Gap", "gAp", "gaP"]);
+  });
 });
