@@ -14,4 +14,16 @@ describe.only("wave()", () => {
   it("should return an array of three strings of 3 letters with each capitalised in turn when passed a string of three letters", () => {
     expect(wave("gap")).to.eql(["Gap", "gAp", "gaP"]);
   });
+  it("should return an array of eight strings of two words containing 8 letters with each capitalised in turn when passed a string of three letters. White space ignored", () => {
+    expect(wave("two words")).to.eql([
+      "Two words",
+      "tWo words",
+      "twO words",
+      "two Words",
+      "two wOrds",
+      "two woRds",
+      "two worDs",
+      "two wordS"
+    ]);
+  });
 });
